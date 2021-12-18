@@ -10,6 +10,8 @@ export class AppComponent {
   age = 21;
   imgURL = 'https://source.unsplash.com/random';
   btnDisabled = true;
+  names: string[] = ['Nicolas', 'Julian', 'Santi'];
+  newName: string = '';
 
   person = {
     name: 'Nikola',
@@ -33,5 +35,14 @@ export class AppComponent {
   chageName(event: Event): void {
     const { value } = event.target as HTMLInputElement;
     this.person.name = value;
+  }
+
+  addName(): void {
+    this.names.push(this.newName);
+    this.newName = '';
+  }
+
+  deleteName(index: number): void {
+    this.names.splice(index, 1);
   }
 }

@@ -16,4 +16,22 @@ export class AppComponent {
     age: 21,
     avatar: 'http://www.w3schools.com/howto/img_avatar.png',
   };
+
+  toggleButton(): void {
+    this.btnDisabled = !this.btnDisabled;
+  }
+
+  increaseAge(): void {
+    this.person.age += 1;
+  }
+
+  onScroll(event: Event): void {
+    const { scrollTop } = event.target as HTMLElement;
+    console.log(scrollTop);
+  }
+
+  chageName(event: Event): void {
+    const { value } = event.target as HTMLInputElement;
+    this.person.name = value;
+  }
 }

@@ -3,8 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'ng-store';
+  name = 'Nikola';
+  age = 21;
+  imgURL = 'https://source.unsplash.com/random';
 }

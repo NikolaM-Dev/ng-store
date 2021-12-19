@@ -10,11 +10,11 @@
 <hr />
 
 <h1>*ngFor Arrays</h1>
-<div>
-  <div *ngFor="let product of products">
-    <img [src]="product.image" [alt]="product.name" width="250" />
-    <h2>{{ product.price | currency }}</h2>
-    <p>{{ product.name }}</p>
+<div class="products">
+  <div class="product" *ngFor="let product of products">
+    <img class="product__img" [src]="product.image" [alt]="product.name" />
+    <h2 class="product__price">{{ product.price | currency }}</h2>
+    <p class="product__name">{{ product.name }}</p>
   </div>
 </div>
 
@@ -93,4 +93,4 @@
 <p>3 + 3 = {{ 3 + 3 }}</p>
 <h3>Hola, soy {{ name }}</h3>
 <p>Mi edad es {{ age }}</p>
-<img src="{{ imgURL }}" alt="image" />
+<img src="{{ imgURL }}" alt="image" width="100" />

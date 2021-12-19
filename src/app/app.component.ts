@@ -12,6 +12,7 @@ export class AppComponent {
   age = 21;
   imgURL = 'https://source.unsplash.com/random';
   btnDisabled = true;
+  widthImg = 100;
   names: string[] = ['Nicolas', 'Julian', 'Santi'];
   newName: string = '';
   products: Product[] = [

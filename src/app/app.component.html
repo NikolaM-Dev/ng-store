@@ -1,3 +1,43 @@
+<h1>Formulario</h1>
+<form (ngSubmit)="onRegister()" #registerForm="ngForm" class="form">
+  <div class="form__group">
+    <label for="name">Nombre</label>
+    <input
+      required
+      type="text"
+      [(ngModel)]="register.name"
+      id="name"
+      name="name"
+    />
+    <p>Mensajes de error</p>
+  </div>
+  <div class="form__group">
+    <label for="email">Email</label>
+    <input
+      required
+      type="text"
+      [(ngModel)]="register.email"
+      id="email"
+      name="email"
+    />
+    <p>Mensajes de error</p>
+  </div>
+  <div class="form__group">
+    <label for="password">Password</label>
+    <input
+      required
+      type="password"
+      [(ngModel)]="register.password"
+      id="password"
+      name="password"
+    />
+    <p>Mensajes de error</p>
+  </div>
+  <button [disabled]="registerForm.invalid" type="submit">Registrar</button>
+</form>
+
+<hr />
+
 <h1>NgClass & NgStyle</h1>
 <input type="text" required [(ngModel)]="person.name" #nameInput4="ngModel" />
 <hr
@@ -28,9 +68,9 @@
 <p class="message--error" [class.invalid]="nameInput2.invalid">
   El campo es requerido
 </p>
-<label for="name">Nombre</label>
+<label for="nameOld">Nombre</label>
 <input
-  id="name"
+  id="nameOld"
   type="text"
   required
   [(ngModel)]="person.name"

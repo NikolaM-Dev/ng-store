@@ -15,6 +15,11 @@ export class AppComponent {
   widthImg = 100;
   names: string[] = ['Nicolas', 'Julian', 'Santi'];
   newName: string = '';
+  register = {
+    name: '',
+    email: '',
+    password: '',
+  };
   box = {
     width: 100,
     height: 100,
@@ -85,5 +90,9 @@ export class AppComponent {
 
   deleteName(index: number): void {
     this.names.splice(index, 1);
+  }
+
+  onRegister(): void {
+    console.log(this.register);
   }
 }
